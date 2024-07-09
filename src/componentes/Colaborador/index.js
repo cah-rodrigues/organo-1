@@ -3,7 +3,11 @@ import './colaborador.css'
 
 const Colaborador = ({ colaborador, corDeFundo, aoDeletar }) => {
     return (<div className="colaborador">
-        <IoIosClose size={30} className='deletar' onClick={aoDeletar}/>
+        <IoIosClose 
+            size={30} 
+            className='deletar' 
+            onClick={() => aoDeletar(colaborador.id)}
+        />
         <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
             <img src={colaborador.imagem} alt={colaborador.nome} />
         </div>
